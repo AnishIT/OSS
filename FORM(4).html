@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function data(std,clgname,uni,marks,) {
+            var str = "<table border='1' cellspacing:'1'>"
+            str+="<tr>"
+            str += "<th>Degree</th>"
+            str += "<th>Scool/collage</th>"
+            str += "<th>University</th>"
+            str += "<th>marks</th>"
+            str += "</tr>"
+            str += "<tr>"
+            str += "<td>"+std+"</td>"
+            str += "<td>"+clgname+"</td>"
+            str += "<td>"+uni+"</td>"
+            str += "<td>"+marks+"</td>"
+            str += "</tr>"
+            document.getElementById("table").innerHTML = str;
+        }
+
+    </script>
+</head>
+<body>
+
+    <form name="f1">
+        Select Qualification :
+        <select name="std">
+            <option>10th</option>
+            <option>12th</option>
+            <option>Graduation</option>
+        </select>
+        <br />
+        <br />
+
+        School/collage
+        <input type="text" name="clg" />
+        <br />
+        <br />
+
+        Board/University
+        <input type="text" name="uni" />
+        <br />
+        <br />
+
+        Marks
+        <input type="number" name="marks" />%
+        <br />
+        <br />
+
+        <input type="button" style="margin-left:50px" value="Update" onclick="data(std.value,clg.value,uni.value,marks.value)" />
+    </form> <br />
+    <div id="table">
+
+    </div>
+
+</body>
+</html>
